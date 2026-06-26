@@ -1,0 +1,14 @@
+{
+  "primitive.color.brand.primary": {
+    "value": "#e60000",
+    "originalValue": "#e60000",
+    "cssVariable": "--primitive-color-brand-primary",
+    "theme": "theme-mqut7dlj"
+  },
+  "primitive.spacing.md": {
+    "value": "16px",
+    "originalValue": "16px",
+    "cssVariable": "--primitive-spacing-md",
+    "theme": "theme-mqut7dlj"
+  }
+}
