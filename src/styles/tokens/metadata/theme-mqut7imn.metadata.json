@@ -1,0 +1,14 @@
+{
+  "semantic-light.color.background.default": {
+    "value": "#ffffff",
+    "originalValue": "#ffffff",
+    "cssVariable": "--semantic-light-color-background-default",
+    "theme": "theme-mqut7imn"
+  },
+  "semantic-light.color.text.primary": {
+    "value": "#222220",
+    "originalValue": "#222220",
+    "cssVariable": "--semantic-light-color-text-primary",
+    "theme": "theme-mqut7imn"
+  }
+}

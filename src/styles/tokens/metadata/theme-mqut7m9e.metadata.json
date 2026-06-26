@@ -1,0 +1,32 @@
+{
+  "component-button.color.background.primary": {
+    "value": "#e60000",
+    "originalValue": "{primitive.color.brand.primary}",
+    "cssVariable": "--component-button-color-background-primary",
+    "theme": "theme-mqut7m9e"
+  },
+  "component-button.opacity.primary": {
+    "value": "1",
+    "originalValue": "1",
+    "cssVariable": "--component-button-opacity-primary",
+    "theme": "theme-mqut7m9e"
+  },
+  "component-button.spacing.padding.x": {
+    "value": "12px",
+    "originalValue": "12px",
+    "cssVariable": "--component-button-spacing-padding-x",
+    "theme": "theme-mqut7m9e"
+  },
+  "primitive.color.brand.primary": {
+    "value": "#e60000",
+    "originalValue": "#e60000",
+    "cssVariable": "--primitive-color-brand-primary",
+    "theme": "theme-mqut7m9e"
+  },
+  "primitive.spacing.md": {
+    "value": "16px",
+    "originalValue": "16px",
+    "cssVariable": "--primitive-spacing-md",
+    "theme": "theme-mqut7m9e"
+  }
+}

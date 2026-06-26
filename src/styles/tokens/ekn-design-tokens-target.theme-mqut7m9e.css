@@ -1,0 +1,7 @@
+[data-theme="theme-mqut7m9e"] {
+  --component-button-opacity-primary: 1;
+  --component-button-spacing-padding-x: 12px;
+  --primitive-color-brand-primary: #e60000;
+  --primitive-spacing-md: 16px;
+  --component-button-color-background-primary: var(--primitive-color-brand-primary);
+}
