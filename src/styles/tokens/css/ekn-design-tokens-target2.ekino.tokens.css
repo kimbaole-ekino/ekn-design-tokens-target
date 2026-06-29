@@ -1,0 +1,6 @@
+[data-theme="ekino"] {
+  --global-border-radius-primary: 8px;
+  --global-border-radius-secondary: 6px;
+  --global-color-primary: #ececec;
+  --light-border-width-primary: 1px;
+}
