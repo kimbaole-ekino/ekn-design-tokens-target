@@ -1,0 +1,19 @@
+/* Do not edit directly, this file was auto-generated. */
+
+:root {
+  --global-color-black: #000000;
+  --global-color-grey-light: #eeeeee;
+  --global-color-grey-over-black: #808080;
+  --global-color-grey-over-white: #666666;
+  --global-color-grey-soft-black: #1a1a1a;
+  --global-color-off-white: #fffefa;
+  --global-color-red-havas: #e60000;
+  --global-color-white: #ffffff;
+  --global-spacing-16: 16px;
+  --global-spacing-20: 20px;
+  --global-spacing-32: 32px;
+  --global-spacing-40: 40px;
+  --color-background-primary: var(--global-color-black);
+  --color-content-primary: var(--global-color-white);
+  --color-content-sub-title: var(--global-color-grey-over-black);
+}
