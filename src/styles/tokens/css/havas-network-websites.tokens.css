@@ -16,7 +16,7 @@
 
 :root[data-color-scheme="health-black"],
 [data-color-scheme="health-black"] {
-  --color-content-primary: #2bf910;
+  --color-content-primary: #570fff;
   --color-background-primary: var(--global-color-red-havas);
   --color-content-sub-title: var(--global-color-white);
 }
