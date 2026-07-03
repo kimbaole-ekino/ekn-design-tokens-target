@@ -14,6 +14,13 @@
   --color-content-sub-title: var(--global-color-grey-over-white);
 }
 
+:root[data-color-scheme="health-black"],
+[data-color-scheme="health-black"] {
+  --color-content-primary: #570fff;
+  --color-background-primary: var(--global-color-red-havas);
+  --color-content-sub-title: var(--global-color-white);
+}
+
 :root[data-color-scheme="creative-black"],
 [data-color-scheme="creative-black"] {
   --color-background-primary: var(--global-color-black);
