@@ -13,7 +13,4 @@
   --global-spacing-20: 20px;
   --global-spacing-32: 32px;
   --global-spacing-40: 40px;
-  --health-black-color-background-primary: var(--global-color-red-havas);
-  --health-black-color-content-primary: #570fff;
-  --health-black-color-content-sub-title: var(--global-color-white);
 }
