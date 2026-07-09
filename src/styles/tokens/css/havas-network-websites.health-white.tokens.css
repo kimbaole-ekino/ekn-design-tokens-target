@@ -2,8 +2,6 @@
 
 :root {
   --color-background-primary: var(--global-color-white);
-  --color-content-primary: var(--global-color-black);
+  --color-content-primary: var(--global-color-grey-light);
   --color-content-sub-title: var(--global-color-grey-over-white);
-  --color-demo-black: var(--global-color-black);
-  --color-demo-white: var(--global-color-white);
 }
