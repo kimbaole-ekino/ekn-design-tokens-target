@@ -1,0 +1,22 @@
+/* Do not edit directly, this file was auto-generated. */
+
+:root[data-color-scheme="creative-black"],
+[data-color-scheme="creative-black"] {
+  --color-background-primary: var(--global-color-black);
+  --color-content-primary: var(--global-color-white);
+  --color-content-sub-title: var(--global-color-grey-over-black);
+}
+
+:root[data-color-scheme="creative-white"],
+[data-color-scheme="creative-white"] {
+  --color-background-primary: var(--global-color-white);
+  --color-content-primary: var(--global-color-black);
+  --color-content-sub-title: var(--global-color-grey-over-white);
+}
+
+:root[data-color-scheme="creative-gradient"],
+[data-color-scheme="creative-gradient"] {
+  --color-background-primary: var(--global-color-black);
+  --color-content-primary: var(--global-color-white);
+  --color-content-sub-title: var(--global-color-white);
+}
