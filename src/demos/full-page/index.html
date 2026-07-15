@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" data-color-scheme="creative-white">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Root-scoped generated token contexts in one target application." />
+    <title>Root-scoped token contexts</title>
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/creative-black.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/creative-white.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/cx-black.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/cx-white.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/health-black.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/health-white.css" />
+    <link rel="stylesheet" href="../shared/demo.css" />
+  </head>
+  <body class="full-page-demo">
+    <header class="demo-header">
+      <a class="demo-brand" href="../../../index.html">Token delivery proof</a>
+      <nav class="demo-nav" aria-label="Demo navigation">
+        <a href="../block/index.html">Block scope</a>
+        <a href="./index.html" aria-current="page">Root scope</a>
+        <button class="scheme-button" type="button" data-page-scheme data-scheme="creative-white" aria-pressed="true">Creative W</button>
+        <button class="scheme-button" type="button" data-page-scheme data-scheme="creative-black" aria-pressed="false">Creative B</button>
+        <button class="scheme-button" type="button" data-page-scheme data-scheme="cx-white" aria-pressed="false">CX W</button>
+        <button class="scheme-button" type="button" data-page-scheme data-scheme="cx-black" aria-pressed="false">CX B</button>
+        <button class="scheme-button" type="button" data-page-scheme data-scheme="health-white" aria-pressed="false">Health W</button>
+        <button class="scheme-button" type="button" data-page-scheme data-scheme="health-black" aria-pressed="false">Health B</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="demo-intro">
+        <div>
+          <p class="eyebrow">Proof B / Root ownership</p>
+          <h1>One switch.<br />Whole system.</h1>
+        </div>
+        <div class="demo-intro__copy">
+          <p>
+            The document root owns the context. Six generated files can drive the complete interface
+            without changing one component selector.
+          </p>
+          <code class="contract-code">&lt;html data-color-scheme="creative-white"&gt;</code>
+        </div>
+      </section>
+
+      <section class="token-section">
+        <div class="token-section__inner">
+          <div class="token-section__topline"><p class="eyebrow">Current context inherited everywhere</p><p class="eyebrow">Choose a mode in the header</p></div>
+          <h2 class="display-title">The contract stays. <span class="accent">The signal changes.</span></h2>
+          <div class="hero-copy">
+            <p>Background, text, surface, action, and accent all resolve from the root context.</p>
+            <a class="token-button" href="#full-work">See unchanged components</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="full-work" class="token-section">
+        <div class="token-section__inner">
+          <div class="token-section__topline"><p class="eyebrow">Same DOM and component CSS</p><p class="eyebrow">No local scheme attributes</p></div>
+          <div class="work-grid">
+            <article class="work-card"><p>Creative</p><h3>Violet makes experimentation immediately legible.</h3></article>
+            <article class="work-card"><p>Customer experience</p><h3>Crimson turns attention into a decisive action.</h3></article>
+            <article class="work-card"><p>Health</p><h3>Green provides calm direction when clarity matters.</h3></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="token-section">
+        <div class="token-section__inner">
+          <div class="token-section__topline"><p class="eyebrow">Delivered integration result</p><p class="eyebrow">Root selector proof</p></div>
+          <div class="stats-grid">
+            <div class="stat"><strong>01</strong><span>Root attribute</span></div>
+            <div class="stat"><strong>06</strong><span>Generated contexts</span></div>
+            <div class="stat"><strong>00</strong><span>Hardcoded brand colors</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="token-section">
+        <div class="token-section__inner">
+          <div class="token-section__topline"><p class="eyebrow">Semantic component contract</p><p class="eyebrow">Inherited by every descendant</p></div>
+          <ul class="capability-list">
+            <li><small>01</small><span>Background and text</span><span>↗</span></li>
+            <li><small>02</small><span>Primary signal</span><span>↗</span></li>
+            <li><small>03</small><span>Surface hierarchy</span><span>↗</span></li>
+            <li><small>04</small><span>Button text contrast</span><span>↗</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="token-inspector" data-token-inspector aria-live="polite">
+        <h2>Computed values — document root (<span data-inspector-scope></span>)</h2>
+        <div class="token-inspector-grid">
+          <div><span class="token-name">--color-background</span><span class="token-value" data-token-value="--color-background"></span></div>
+          <div><span class="token-name">--color-text</span><span class="token-value" data-token-value="--color-text"></span></div>
+          <div><span class="token-name">--color-primary</span><span class="token-value" data-token-value="--color-primary"></span></div>
+          <div><span class="token-name">--color-surface</span><span class="token-value" data-token-value="--color-surface"></span></div>
+          <div><span class="token-name">--color-button-text</span><span class="token-value" data-token-value="--color-button-text"></span></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="demo-footer"><span>Scope owner: document root</span><span>Component selectors changed: none</span></footer>
+    <script src="../shared/demo.js"></script>
+  </body>
+</html>
