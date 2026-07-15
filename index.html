@@ -3,30 +3,132 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CTA Banner Projects</title>
-    <link rel="stylesheet" href="./src/styles/tokens/css/havas-network-websites.reference.css" />
-    <link rel="stylesheet" href="./src/styles/tokens/css/havas-network-websites.tokens.css" />
-    <link rel="stylesheet" href="./src/shared/css/global.css" />
-    <link rel="stylesheet" href="./src/shared/css/demo-shell.css" />
+    <meta
+      name="description"
+      content="A live proof that generated Central Tokens artifacts work in a target application."
+    />
+    <title>Token delivery — live proof</title>
+    <link rel="stylesheet" href="./src/styles/tokens/ekn/css/creative-black.css" />
+    <link rel="stylesheet" href="./src/styles/tokens/ekn/css/creative-white.css" />
+    <link rel="stylesheet" href="./src/styles/tokens/ekn/css/cx-black.css" />
+    <link rel="stylesheet" href="./src/styles/tokens/ekn/css/cx-white.css" />
+    <link rel="stylesheet" href="./src/styles/tokens/ekn/css/health-black.css" />
+    <link rel="stylesheet" href="./src/styles/tokens/ekn/css/health-white.css" />
+    <link rel="stylesheet" href="./src/demos/shared/landing.css" />
   </head>
-  <body class="parent-page" data-color-scheme="health-white">
-    <header class="parent-hero">
-      <div>
-        <p class="eyebrow">Static product demos</p>
-        <h1>CTA banner projects</h1>
-      </div>
+  <body>
+    <header class="landing-header">
+      <a class="brand" href="./index.html" aria-label="Token delivery proof home">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>Token delivery / proof 01</span>
+      </a>
+      <div class="release-status"><span aria-hidden="true"></span> Pipeline verified</div>
     </header>
 
     <main>
-      <section class="compare-grid" aria-label="Side by side project comparison">
-        <article class="compare-item">
-          <iframe title="CX CTA banner demo" src="./src/cx/index.html"></iframe>
+      <section class="landing-hero">
+        <div class="landing-hero__meta">
+          <p>Canonical JSON → shared validator → Central → target</p>
+          <p>6 generated artifacts / 0 copied values</p>
+        </div>
+        <h1>Not a mock-up.<br /><em>Live tokens.</em></h1>
+        <div class="landing-hero__foot">
+          <p>
+            One component language, rendered through three contexts and two appearances. Every color
+            below comes from delivered CSS.
+          </p>
+          <span class="scroll-cue" aria-hidden="true">↓ Inspect the proof</span>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Delivery results">
+        <div><strong>03</strong><span>contexts</span></div>
+        <div><strong>02</strong><span>appearances</span></div>
+        <div><strong>06</strong><span>CSS artifacts</span></div>
+        <div><strong>01</strong><span>semantic contract</span></div>
+      </section>
+
+      <section class="context-gallery" aria-labelledby="contexts-title">
+        <div class="section-heading">
+          <p class="eyebrow">Generated output, rendered directly</p>
+          <h2 id="contexts-title">Same structure.<br />Distinct signal.</h2>
+        </div>
+
+        <article class="context-pair context-pair--creative">
+          <div class="context-face" data-color-scheme="creative-black">
+            <p class="context-index">01 / Creative / Black</p>
+            <h3>Make the<br /><span>unexpected</span><br />useful.</h3>
+            <a href="./src/demos/block/index.html">Explore context <span>↗</span></a>
+          </div>
+          <div class="context-face context-face--compact" data-color-scheme="creative-white">
+            <span class="token-dot" aria-hidden="true"></span>
+            <p>Primary<br /><code>#6c4dff</code></p>
+          </div>
         </article>
 
-        <article class="compare-item">
-          <iframe title="Health CTA banner demo" src="./src/health/index.html"></iframe>
+        <article class="context-pair context-pair--cx">
+          <div class="context-face context-face--compact" data-color-scheme="cx-black">
+            <span class="token-dot" aria-hidden="true"></span>
+            <p>Primary<br /><code>#e31b54</code></p>
+          </div>
+          <div class="context-face" data-color-scheme="cx-white">
+            <p class="context-index">02 / CX / White</p>
+            <h3>Every touchpoint<br /><span>earns</span><br />attention.</h3>
+            <a href="./src/demos/full-page/index.html">Change the root <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="context-pair context-pair--health">
+          <div class="context-face" data-color-scheme="health-black">
+            <p class="context-index">03 / Health / Black</p>
+            <h3>Clarity where<br /><span>it matters</span><br />most.</h3>
+            <a href="./src/demos/block/index.html#network">See mixed scopes <span>↗</span></a>
+          </div>
+          <div class="context-face context-face--compact" data-color-scheme="health-white">
+            <span class="token-dot" aria-hidden="true"></span>
+            <p>Primary<br /><code>#008f72</code></p>
+          </div>
         </article>
       </section>
+
+      <section class="strategy-grid" aria-label="Runtime demonstrations">
+        <a class="strategy-card" href="./src/demos/block/index.html">
+          <span class="strategy-card__number">A</span>
+          <div>
+            <p class="eyebrow">Mixed-context page</p>
+            <h2>Block scope</h2>
+          </div>
+          <p>Creative, CX, and Health coexist on one document through local selectors.</p>
+          <span class="strategy-card__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="strategy-card strategy-card--dark" href="./src/demos/full-page/index.html">
+          <span class="strategy-card__number">B</span>
+          <div>
+            <p class="eyebrow">One application context</p>
+            <h2>Root scope</h2>
+          </div>
+          <p>One control changes the entire document without changing component CSS.</p>
+          <span class="strategy-card__arrow" aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section class="contract-panel">
+        <div>
+          <p class="eyebrow">The integration boundary</p>
+          <h2>Delivered CSS.<br />Nothing hidden.</h2>
+        </div>
+        <dl>
+          <div><dt>Source</dt><dd><code>src/styles/tokens/ekn/css</code></dd></div>
+          <div><dt>Selectors</dt><dd><code>:root[data-color-scheme]</code> + scoped equivalent</dd></div>
+          <div><dt>Component API</dt><dd><code>--color-background</code>, <code>--color-text</code>, <code>--color-primary</code></dd></div>
+          <div><dt>Ownership</dt><dd>Generated files remain read-only in the target.</dd></div>
+        </dl>
+      </section>
     </main>
+
+    <footer class="landing-footer">
+      <span>EKN Design Tokens / MVP proof</span>
+      <span>Built from generated artifacts</span>
+    </footer>
   </body>
 </html>

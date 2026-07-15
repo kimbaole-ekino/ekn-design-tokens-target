@@ -1,0 +1,14 @@
+{
+  "name": "ekn-design-tokens-target",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate:demo": "node scripts/validate-demo.mjs",
+    "validate": "npm test && npm run validate:demo"
+  }
+}

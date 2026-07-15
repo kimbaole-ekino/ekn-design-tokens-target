@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Block-scoped generated token contexts in one target page." />
+    <title>Block-scoped token contexts</title>
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/creative-black.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/creative-white.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/cx-black.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/cx-white.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/health-black.css" />
+    <link rel="stylesheet" href="../../styles/tokens/ekn/css/health-white.css" />
+    <link rel="stylesheet" href="../shared/demo.css" />
+  </head>
+  <body>
+    <header class="demo-header">
+      <a class="demo-brand" href="../../../index.html">Token delivery proof</a>
+      <nav class="demo-nav" aria-label="Demo navigation">
+        <a href="./index.html" aria-current="page">Block scope</a>
+        <a href="../full-page/index.html">Root scope</a>
+        <a href="../../../index.html">Overview</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="demo-intro">
+        <div>
+          <p class="eyebrow">Proof A / Local ownership</p>
+          <h1>Three contexts.<br />One page.</h1>
+        </div>
+        <div class="demo-intro__copy">
+          <p>
+            Every block selects one delivered context. Creative, CX, and Health coexist while every
+            component keeps the same semantic CSS contract.
+          </p>
+          <code class="contract-code">&lt;section data-color-scheme="creative-black"&gt;</code>
+        </div>
+      </section>
+
+      <section id="block-hero" class="token-section" data-color-scheme="creative-black" data-inspector-source>
+        <div class="token-section__inner">
+          <div class="token-section__topline">
+            <p class="eyebrow">Creative / Generated violet</p>
+            <label class="block-control">Hero context <select class="block-scheme-select" data-block-scheme-control="block-hero"></select></label>
+          </div>
+          <h2 class="display-title">Make the <span class="accent">unexpected</span> useful.</h2>
+          <div class="hero-copy">
+            <p>
+              The accent is not component styling. It is <code>--color-primary</code> arriving from
+              the generated Creative artifact.
+            </p>
+            <a class="token-button" href="#work">Inspect every context</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="token-section" data-color-scheme="cx-white">
+        <div class="token-section__inner">
+          <div class="token-section__topline">
+            <p class="eyebrow">CX / Generated crimson</p>
+            <label class="block-control">Work context <select class="block-scheme-select" data-block-scheme-control="work"></select></label>
+          </div>
+          <div class="work-grid">
+            <article class="work-card"><p>Travel / Loyalty</p><h3>Making every journey feel personally relevant.</h3></article>
+            <article class="work-card"><p>Retail / Service</p><h3>Turning small interactions into lasting preference.</h3></article>
+            <article class="work-card"><p>Product / Growth</p><h3>Designing the next useful reason to return.</h3></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="network" class="token-section" data-color-scheme="health-black">
+        <div class="token-section__inner">
+          <div class="token-section__topline">
+            <p class="eyebrow">Health / Generated green</p>
+            <label class="block-control">Network context <select class="block-scheme-select" data-block-scheme-control="network"></select></label>
+          </div>
+          <div class="stats-grid">
+            <div class="stat"><strong>03</strong><span>Token contexts</span></div>
+            <div class="stat"><strong>06</strong><span>Delivered files</span></div>
+            <div class="stat"><strong>00</strong><span>Component rewrites</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" class="token-section" data-color-scheme="creative-white">
+        <div class="token-section__inner">
+          <div class="token-section__topline">
+            <p class="eyebrow">One semantic component API</p>
+            <label class="block-control">List context <select class="block-scheme-select" data-block-scheme-control="capabilities"></select></label>
+          </div>
+          <ul class="capability-list">
+            <li><small>01</small><span>Background and text roles</span><span>↗</span></li>
+            <li><small>02</small><span>Primary action signal</span><span>↗</span></li>
+            <li><small>03</small><span>Surface hierarchy</span><span>↗</span></li>
+            <li><small>04</small><span>Scoped runtime ownership</span><span>↗</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="token-inspector" data-token-inspector aria-live="polite">
+        <h2>Computed values — hero block (<span data-inspector-scope></span>)</h2>
+        <div class="token-inspector-grid">
+          <div><span class="token-name">--color-background</span><span class="token-value" data-token-value="--color-background"></span></div>
+          <div><span class="token-name">--color-text</span><span class="token-value" data-token-value="--color-text"></span></div>
+          <div><span class="token-name">--color-primary</span><span class="token-value" data-token-value="--color-primary"></span></div>
+          <div><span class="token-name">--color-surface</span><span class="token-value" data-token-value="--color-surface"></span></div>
+          <div><span class="token-name">--color-button-text</span><span class="token-value" data-token-value="--color-button-text"></span></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="demo-footer"><span>Scope owner: each section</span><span>Generated files: read-only</span></footer>
+    <script src="../shared/demo.js"></script>
+  </body>
+</html>
