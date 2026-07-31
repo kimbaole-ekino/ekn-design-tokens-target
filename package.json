@@ -21,6 +21,6 @@
     "vite": "^7.3.6"
   },
   "dependencies": {
-    "@ekinotech/design-tokens-ekinotech-showcase": "0.1.0"
+    "@ekinotech/design-tokens-ekinotech-showcase": "0.1.1"
   }
 }
