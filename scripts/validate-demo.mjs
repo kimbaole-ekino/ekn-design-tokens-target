@@ -13,6 +13,7 @@ const schemes = [
   "health-white",
 ];
 const requiredFiles = [
+  ".npmrc",
   "index.html",
   "src/demos/block/index.html",
   "src/demos/full-page/index.html",
@@ -23,6 +24,22 @@ const requiredFiles = [
 
 for (const relativePath of requiredFiles) {
   await access(path.join(root, relativePath));
+}
+
+const npmrc = await readFile(path.join(root, ".npmrc"), "utf8");
+const expectedRegistry =
+  "@ekinotech:registry=https://gitlab.ekino.com/api/v4/projects/8864/packages/npm/";
+const expectedAuth =
+  "//gitlab.ekino.com/api/v4/projects/8864/packages/npm/:_authToken=${DESIGN_TOKENS_NPM_TOKEN}";
+
+if (!npmrc.includes(expectedRegistry) || !npmrc.includes(expectedAuth)) {
+  throw new Error(
+    ".npmrc must configure the Central package registry with DESIGN_TOKENS_NPM_TOKEN.",
+  );
+}
+
+if (npmrc.match(/:_authToken=(?!\$\{DESIGN_TOKENS_NPM_TOKEN\})\S+/)) {
+  throw new Error(".npmrc must not contain a committed npm authentication token.");
 }
 
 for (const scheme of schemes) {

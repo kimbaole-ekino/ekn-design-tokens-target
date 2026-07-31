@@ -16,10 +16,9 @@ Normal consumers install the published npm package from Central's project-level 
 }
 ```
 
-The committed [.npmrc.example](.npmrc.example) points the `@ekinotech` scope to Central and contains only `${DESIGN_TOKENS_NPM_TOKEN}`. `.npmrc` is ignored.
+The committed [.npmrc](.npmrc) points the `@ekinotech` scope to Central and contains only the `${DESIGN_TOKENS_NPM_TOKEN}` environment-variable reference. No token value is committed.
 
 ```sh
-cp .npmrc.example .npmrc
 export DESIGN_TOKENS_NPM_TOKEN="<local-output-package-deploy-token>"
 npm ci
 ```

@@ -12,6 +12,14 @@ This repository uses Vite to bundle package CSS into a static site.
 
 The deployment entry point is `/index.html`. `src/demos/shared/tokens.css` imports the six public package CSS exports. Vite resolves those imports and writes deployable CSS assets to `dist`; deployed pages do not load files from `node_modules`.
 
+## Private package access
+
+The committed `.npmrc` contains the GitLab registry URL and reads its authentication value from `DESIGN_TOKENS_NPM_TOKEN`. It does not contain a token.
+
+Create a Deploy Token in Central's GitLab project with only `read_package_registry`. In Vercel, add its token value as the `DESIGN_TOKENS_NPM_TOKEN` environment variable for Production, Preview, and Development. Redeploy after saving the variable.
+
+GitLab returns `404 Project not found` when the private project is not visible to the request. If this error remains, confirm that the Vercel variable is available to the failed deployment and that the Deploy Token belongs to GitLab project `8864` and has not expired.
+
 ## Before deployment
 
 Run locally with Node 22:
