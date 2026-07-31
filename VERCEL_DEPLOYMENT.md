@@ -1,16 +1,16 @@
 # Vercel deployment
 
-This repository is a static site and does not require a framework build.
+This repository uses Vite to bundle package CSS into a static site.
 
 ## Project settings
 
-- Framework preset: **Other**
+- Framework preset: **Vite**
 - Root directory: repository root
-- Build command: leave empty
-- Output directory: leave empty
+- Build command: `npm run build`
+- Output directory: `dist`
 - Install command: `npm ci`
 
-The deployment entry point is `/index.html`. Relative links load the block and full-page demos. Token CSS loads from the installed `@ekinotech/design-tokens-ekinotech-showcase` package under `node_modules`.
+The deployment entry point is `/index.html`. `src/demos/shared/tokens.css` imports the six public package CSS exports. Vite resolves those imports and writes deployable CSS assets to `dist`; deployed pages do not load files from `node_modules`.
 
 ## Before deployment
 

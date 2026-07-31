@@ -18,6 +18,7 @@ const requiredFiles = [
   "src/demos/full-page/index.html",
   "src/demos/shared/demo.css",
   "src/demos/shared/demo.js",
+  "src/demos/shared/tokens.css",
 ];
 
 for (const relativePath of requiredFiles) {
@@ -57,21 +58,26 @@ for (const relativePath of obsoletePaths) {
 const blockHtml = await readFile(path.join(root, "src/demos/block/index.html"), "utf8");
 const pageHtml = await readFile(path.join(root, "src/demos/full-page/index.html"), "utf8");
 const landingHtml = await readFile(path.join(root, "index.html"), "utf8");
+const tokensCss = await readFile(path.join(root, "src/demos/shared/tokens.css"), "utf8");
 
 for (const { name, html } of [
   { name: "landing", html: landingHtml },
   { name: "block", html: blockHtml },
   { name: "full-page", html: pageHtml },
 ]) {
-  for (const scheme of schemes) {
-    const packageCssPath = `${packageName}/css/${scheme}.css`;
-    if (!html.includes(packageCssPath)) {
-      throw new Error(`${name} page must load ${packageCssPath}.`);
-    }
+  if (!html.includes("shared/tokens.css")) {
+    throw new Error(`${name} page must load the shared token CSS entry.`);
   }
 
-  if (html.includes("src/styles/tokens") || html.includes("../../styles/tokens")) {
-    throw new Error(`${name} page must not load copied token CSS.`);
+  if (html.includes("node_modules") || html.includes("styles/tokens")) {
+    throw new Error(`${name} page must not load node_modules or copied token CSS directly.`);
+  }
+}
+
+for (const scheme of schemes) {
+  const packageExport = `${packageName}/${scheme}.css`;
+  if (!tokensCss.includes(`@import "${packageExport}"`)) {
+    throw new Error(`Shared token CSS must import ${packageExport}.`);
   }
 }
 
