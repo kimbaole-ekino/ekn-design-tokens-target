@@ -1,0 +1,2 @@
+@ekinotech:registry=https://<gitlab-host>/api/v4/projects/<central-project-id>/packages/npm/
+//<gitlab-host>/api/v4/projects/<central-project-id>/packages/npm/:_authToken=${DESIGN_TOKENS_NPM_TOKEN}
