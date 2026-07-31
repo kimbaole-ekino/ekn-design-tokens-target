@@ -3,25 +3,38 @@ import path from "node:path";
 import process from "node:process";
 
 const root = process.cwd();
+const packageName = "@ekinotech/design-tokens-ekinotech-showcase";
+const schemes = [
+  "creative-black",
+  "creative-white",
+  "cx-black",
+  "cx-white",
+  "health-black",
+  "health-white",
+];
 const requiredFiles = [
   "index.html",
   "src/demos/block/index.html",
   "src/demos/full-page/index.html",
   "src/demos/shared/demo.css",
   "src/demos/shared/demo.js",
-  "src/styles/tokens/ekn/css/creative-black.css",
-  "src/styles/tokens/ekn/css/creative-white.css",
-  "src/styles/tokens/ekn/css/cx-black.css",
-  "src/styles/tokens/ekn/css/cx-white.css",
-  "src/styles/tokens/ekn/css/health-black.css",
-  "src/styles/tokens/ekn/css/health-white.css",
 ];
 
 for (const relativePath of requiredFiles) {
   await access(path.join(root, relativePath));
 }
 
+for (const scheme of schemes) {
+  const cssUrl = import.meta.resolve(`${packageName}/${scheme}.css`);
+  const css = await readFile(new URL(cssUrl), "utf8");
+
+  if (!css.includes("--color-")) {
+    throw new Error(`Package export ${scheme}.css must contain color custom properties.`);
+  }
+}
+
 const obsoletePaths = [
+  "src/styles/tokens",
   "src/styles/tokens/css",
   "src/styles/tokens/html",
   "src/styles/tokens/json",
@@ -43,6 +56,24 @@ for (const relativePath of obsoletePaths) {
 
 const blockHtml = await readFile(path.join(root, "src/demos/block/index.html"), "utf8");
 const pageHtml = await readFile(path.join(root, "src/demos/full-page/index.html"), "utf8");
+const landingHtml = await readFile(path.join(root, "index.html"), "utf8");
+
+for (const { name, html } of [
+  { name: "landing", html: landingHtml },
+  { name: "block", html: blockHtml },
+  { name: "full-page", html: pageHtml },
+]) {
+  for (const scheme of schemes) {
+    const packageCssPath = `${packageName}/css/${scheme}.css`;
+    if (!html.includes(packageCssPath)) {
+      throw new Error(`${name} page must load ${packageCssPath}.`);
+    }
+  }
+
+  if (html.includes("src/styles/tokens") || html.includes("../../styles/tokens")) {
+    throw new Error(`${name} page must not load copied token CSS.`);
+  }
+}
 
 if (
   !blockHtml.includes('data-color-scheme="creative-black"') ||
@@ -63,5 +94,5 @@ if (schemeTags.length !== 1) {
 }
 
 console.log(
-  `Validated ${requiredFiles.length} required demo files, six generated schemes, both selector strategies, and removal of obsolete output paths.`,
+  `Validated ${requiredFiles.length} app files, six package CSS exports, both selector strategies, and removal of copied token CSS.`,
 );
